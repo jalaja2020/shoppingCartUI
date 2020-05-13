@@ -298,18 +298,12 @@ function tablecreate(response){
     var headTd6 = document.createElement('td');
     var headTd6text = document.createTextNode ("addcart");
     headTd6.appendChild(headTd6text);
-    
-    
-
     headTr.appendChild(headTd1);
     headTr.appendChild(headTd2);
     headTr.appendChild(headTd3);
     headTr.appendChild(headTd4);
     headTr.appendChild(headTd5);
-    headTr.appendChild(headTd6);
-
-
-    
+    headTr.appendChild(headTd6); 
     thead.appendChild(headTr);
     var data = JSON.parse(response);
     var len = data.length;
@@ -346,7 +340,7 @@ function tablecreate(response){
             console.log("data: "+data[0].innerHTML+" "+data[1].innerHTML+"  "+data[2].innerHTML+" "+data[3].innerHTML+" "+data[4].innerHTML);
             document.getElementById("userIdvalue").value=data[0].innerHTML;
             localStorage.setItem("userIdvalue", data[0].innerHTML);
-            window.location.href="ProductDetails.html?userId="+data[0].innerHTML;
+            addNewProductsToCart();
         })
         
         updatebutton.appendChild(updatebuttontxt);
@@ -382,18 +376,7 @@ function getSelectedProduct(){
     document.getElementById("productId").value=data.productId;
     document.getElementById("productName").value=data.productName;
     document.getElementById("userId").value=cartUserId;
-    document.getElementById("productPrice").value=data.productPrice;
-/*
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            alert("data inserted successfuly");
-           console.log(this.responseText);
-        }
-     };
-    xhttp.open("Post", "http://localhost:3000/products", true);
-    xhttp.setRequestHeader("Content-type","application/json");
-    xhttp.send(JSON.stringify(obj));*/    
+    document.getElementById("productPrice").value=data.productPrice;  
 }
 function addCart(){
    
@@ -439,10 +422,11 @@ function getDataCarts() {
 
         if(this.readyState ===4 && this.status === 200){
             console.log(this.response);
+            localStorage.setItem("cartlist",this.response);
             tablecreatecarts(this.response);
         }
     }
-    // var userId = localStorage.getItem("userIdvalue");
+   
     httpReq.open('get', 'http://localhost:3000/carts?userId='+localStorage.getItem("userIdvalue"), true);
     httpReq.send();
 }
@@ -553,6 +537,55 @@ function tablecreatecarts(response){
 function addNewProductsToCart(){
     window.location.href="ProductDetails.html";
 }
-function placeOrder(){
-    window.location.href="PlaceOrder.html";
+function placeOrderData(){
+
+    var cartlist = JSON.parse(localStorage.getItem("cartlist"));
+    console.log("cartlist :=>"+cartlist.length);
+    var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+alert(dateTime);
+   for (i in cartlist) {
+       
+        var orderObj = {
+            productId : cartlist[i].productId, 
+            productName : cartlist[i].productName , 
+            userId :cartlist[i].userId,
+            productPrice:cartlist[i].productPrice,
+            orderDate : dateTime.toString()
+        };
+        
+      placeOrder(orderObj);
+    }// window.location.href="PlaceOrder.html";
+}
+
+function placeOrder(orderObj) {
+    var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    alert("data inserted successfuly");
+                   console.log(this.responseText);
+                }
+             };
+            xhttp.open("Post", "http://localhost:3000/orders", true);
+            xhttp.setRequestHeader("Content-type","application/json");
+            xhttp.send(JSON.stringify(orderObj));
+   
+}
+function deleteAddCartDetails(){
+    
+    var xmlhttp;
+    if(window.XMLHttpRequest){
+    xmlhttp=new XMLHttpRequest();
+    }
+    xmlhttp.onreadystatechange= function(){
+        if(this.status === 200 && this.readyState===4){
+            alert("Deleted Successfully");
+        }
+    }
+    xmlhttp.open("DELETE", "http://localhost:3000/carts", true);
+    xmlhttp.setRequestHeader('Content-type','application/json');
+    xmlhttp.send(null);
+    
 }

@@ -5,7 +5,7 @@
 <title>Add Cart</title>
 <script type="text/javascript" src="js/shoppingcart.js"></script>
 </head>
-<body>
+<body onload="getSelectedProduct()">
 <h2>Add Cart Details</h2>
 
 Product Id:
@@ -25,7 +25,9 @@ Product Qty:
 <input type="submit" id="cartSubmit" value="cartSubmit" onclick="validateProduct()"/>
 
 <input type = "button" id="disply" name="display" onclick="getDataCarts()" value="disply cart"/></br>
-<input type = "button" id="placeOder" name="placeOrder" onclick="placeOrder()" value="place order"/>
+<input type = "button" id="placeOder" name="placeOrder" onclick="placeOrderData()" value="place order"/>
+<input type = "button" id="deletecart" name="deletecart" onclick="deleteAddCartDetails()" value="remove carts"/>
+
 <input type = "button" id="back" name="back" onclick="addNewProductsToCart()" value="add more products"/>
 
 </body>

@@ -97,6 +97,13 @@
       "userEmail": "user5@hcl.com",
       "userPassword": "12345689",
       "id": 14
+    },
+    {
+      "userName": "user8",
+      "userMobile": "+91905206334",
+      "userEmail": "user8@hcl.com",
+      "userPassword": "dfsdfsdf",
+      "id": 15
     }
   ],
   "products": [
@@ -153,15 +160,64 @@
       "productPrice": "46",
       "prodQty": "2",
       "id": 3
+    },
+    {
+      "productId": "prod123",
+      "productName": "rice1",
+      "userId": "15",
+      "productPrice": "246",
+      "prodQty": "2",
+      "id": 4
+    },
+    {
+      "productId": "prod124",
+      "productName": "milk",
+      "userId": "15",
+      "productPrice": "46",
+      "prodQty": "2",
+      "id": 5
     }
   ],
-  "orders":[
-  {
-     "id":1,
-	 "userId":"10",
-	 "productId":"prod124",
-	 "orderDate":"dsff",
-	 "productName":"milk"
-  }
+  "orders": [
+    {
+      "productId": "prod123",
+      "productName": "rice1",
+      "userId": "10",
+      "productPrice": "246",
+      "orderDate": "2020-5-13 20:0:19",
+      "id": 1
+    },
+    {
+      "productId": "prod123",
+      "productName": "rice1",
+      "userId": "10",
+      "productPrice": "369",
+      "orderDate": "2020-5-13 20:0:19",
+      "id": 2
+    },
+    {
+      "productId": "prod124",
+      "productName": "milk",
+      "userId": "10",
+      "productPrice": "46",
+      "orderDate": "2020-5-13 20:0:19",
+      "id": 3
+    },
+    {
+      "productId": "prod123",
+      "productName": "rice1",
+      "userId": "15",
+      "productPrice": "246",
+      "orderDate": "2020-5-13 20:24:44",
+      "id": 4
+    },
+    {
+      "productId": "prod124",
+      "productName": "milk",
+      "userId": "15",
+      "productPrice": "46",
+      "orderDate": "2020-5-13 20:24:44",
+      "id": 5
+    }
   ]
 }
