@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Cart</title>
+<script type="text/javascript" src="js/shoppingcart.js"></script>
+</head>
+<body onload="getSelectedProduct()">
+<h2>Place order Details</h2>
+
+User Id:
+<input type="text" name="userId" id="userId"  maxlength="10" 
+ placeholder="Enter user Id" required /></br>
+Product Id:
+<input type="text" name="productId" id="productId"  placeholder="Enter Product id" required/></br>
+ Order date : 
+<input type="date" name="orderDate" id="orderDate"  placeholer="Enter order date" required/></br>
+ product name :
+<input type="text" name="productName" id="productName"  placeholer="Enter product name" required/></br>
+
+
+<input type = "button" id="addOrder" name="addOrder" onclick="addOrder()" value="add order"/>
+
+<input type="submit" id="orderSubmit" value="orderSubmit" onclick="validateOrders()"/>
+
+<input type = "button" id="disply" name="display" onclick="displayOrders()" value="disply orders"/></br>
+
+
+
+</body>
+</html>

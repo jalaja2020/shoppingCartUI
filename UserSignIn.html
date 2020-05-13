@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User LogIn</title>
+<script type="text/javascript" src="js/shoppingcart.js"></script>
+</head>
+<body >
+   
+<h2>Shopping cart Log In</h2>
+    User email 
+    <input type="email" name="userEmail" id="userEmail" pattern="\w+([-+.]\w+)*@(dbs\.com|hcl\.com)" placeholer="Enter email" required/></br>
+    
+    User Password 
+    <input type="password" id="userPassword" name="userPassword" minlength="8" placeholder="Enter password" required/><br/>
+    
+    <input type = "button" id="add" name="add" onclick="displayUser()" value="SignIn"/>
+    <input type="hidden" id="userIdvalue" name="userIdvalue" />
+</body>
+</html>

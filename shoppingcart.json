@@ -1,0 +1,167 @@
+{
+  "users": [
+    {
+      "userName": "test2345",
+      "userMobile": "+919052063959",
+      "userEmail": "test@hcl.com",
+      "userPassword": "sdfsdf",
+      "id": 1
+    },
+    {
+      "userName": "test2345",
+      "userMobile": "+919052063959",
+      "userEmail": "test@hcl.com",
+      "userPassword": "sdfsdf",
+      "id": 2
+    },
+    {
+      "userName": "test2345",
+      "userMobile": "+919052063959",
+      "userEmail": "test@hcl.com",
+      "userPassword": "sdfsdfdgdg",
+      "id": 3
+    },
+    {
+      "userName": "test345",
+      "userMobile": "+919052063934",
+      "userEmail": "sfsdf@hcl.com",
+      "userPassword": "dsfsdfsdfdsf",
+      "id": 4
+    },
+    {
+      "userName": "test234",
+      "userMobile": "+919052063958",
+      "userEmail": "jalaja@hcl.com",
+      "userPassword": "sdfsdfdsf",
+      "id": 5
+    },
+    {
+      "userName": "trer23",
+      "userMobile": "+919052063958",
+      "userEmail": "jalaja@hcl.com",
+      "userPassword": "sdfsdfsdfsdf",
+      "id": 6
+    },
+    {
+      "userName": "tst234",
+      "userMobile": "+919052063958",
+      "userEmail": "jalaja@hcl.com",
+      "userPassword": "sfdsfdsfdsfdsf",
+      "id": 7
+    },
+    {
+      "userName": "tedr",
+      "userMobile": "+919052063958",
+      "userEmail": "jalaja@hcl.com",
+      "userPassword": "sdfsddfsdfsdfsdf",
+      "id": 8
+    },
+    {
+      "userName": "tre345",
+      "userMobile": "+919052063934",
+      "userEmail": "jalaja@hcl.com",
+      "userPassword": "sdfsdfdsfdsf",
+      "id": 9
+    },
+    {
+      "userName": "user1",
+      "userMobile": "+919052063958",
+      "userEmail": "user1@hcl.com",
+      "userPassword": "sfsdfdsfsdf",
+      "id": 10
+    },
+    {
+      "userName": "user2",
+      "userMobile": "+919052063958",
+      "userEmail": "user2@hcl.com",
+      "userPassword": "sdfsdfsdfdsf",
+      "id": 11
+    },
+    {
+      "userName": "user3",
+      "userMobile": "+919052063934",
+      "userEmail": "user3@hcl.com",
+      "userPassword": "1234556",
+      "id": 12
+    },
+    {
+      "userName": "user4",
+      "userMobile": "+9190520633",
+      "userEmail": "user4@hcl.com",
+      "userPassword": "sdfsdf",
+      "id": 13
+    },
+    {
+      "userName": "user5",
+      "userMobile": "+9190520345",
+      "userEmail": "user5@hcl.com",
+      "userPassword": "12345689",
+      "id": 14
+    }
+  ],
+  "products": [
+    {
+      "productId": "prod123",
+      "productName": "rice1",
+      "productPrice": "123",
+      "productReivew": "5",
+      "id": 1
+    },
+    {
+      "productId": "prod123",
+      "productName": "rice",
+      "productPrice": "345",
+      "productReivew": "5",
+      "id": 2
+    },
+    {
+      "productId": "prod124",
+      "productName": "milk",
+      "productPrice": "23",
+      "productReivew": "3",
+      "id": 3
+    },
+    {
+      "productId": "prod123",
+      "productName": "rice",
+      "productPrice": "123",
+      "productReivew": "4",
+      "id": 4
+    }
+  ],
+  "carts": [
+    {
+      "productId": "prod123",
+      "productName": "rice1",
+      "userId": "10",
+      "productPrice": "246",
+      "prodQty": "2",
+      "id": 1
+    },
+    {
+      "productId": "prod123",
+      "productName": "rice1",
+      "userId": "10",
+      "productPrice": "369",
+      "prodQty": "3",
+      "id": 2
+    },
+    {
+      "productId": "prod124",
+      "productName": "milk",
+      "userId": "10",
+      "productPrice": "46",
+      "prodQty": "2",
+      "id": 3
+    }
+  ],
+  "orders":[
+  {
+     "id":1,
+	 "userId":"10",
+	 "productId":"prod124",
+	 "orderDate":"dsff",
+	 "productName":"milk"
+  }
+  ]
+}

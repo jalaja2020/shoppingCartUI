@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Cart</title>
+<script type="text/javascript" src="js/shoppingcart.js"></script>
+</head>
+<body>
+<h2>Add Cart Details</h2>
+
+Product Id:
+<input type="text" name="productId" id="productId"  maxlength="10" 
+ placeholder="Enter Product Id" required /></br>
+Product Name:
+<input type="text" name="productName" id="productName"  placeholder="Enter Product name" required/></br>
+ Product price: 
+<input type="number" name="productPrice" id="productPrice"  placeholer="Enter product price" required/></br>
+ User Id :
+<input type="text" name="userId" id="userId"  placeholer="Enter User id" required/></br>
+Product Qty:
+<input type="number" name="prodQty" id="prodQty" placeholder="Enter product quantity" required /></br>
+
+<input type = "button" id="addCart" name="addCart" onclick="addCart()" value="add cart"/>
+
+<input type="submit" id="cartSubmit" value="cartSubmit" onclick="validateProduct()"/>
+
+<input type = "button" id="disply" name="display" onclick="getDataCarts()" value="disply cart"/></br>
+<input type = "button" id="placeOder" name="placeOrder" onclick="placeOrder()" value="place order"/>
+<input type = "button" id="back" name="back" onclick="addNewProductsToCart()" value="add more products"/>
+
+</body>
+</html>

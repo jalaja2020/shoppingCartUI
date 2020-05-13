@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add user</title>
+<script type="text/javascript" src="js/shoppingcart.js"></script>
+</head>
+<body >
+   
+<h2>Add User Information</h2>
+
+    User Name: 
+    <input type="text" name="userName" id="userName" pattern="[A-Za-z0-9]+" maxlength="20" 
+     placeholder="Enter User Name" required /></br>
+     User mobile 
+    <input type="text" name="userMobile" id="userMobile" pattern="^((\+){1}91){1}[1-9]{1}[0-9]{9}$" placeholder="Enter mobile" required/></br>
+    User email 
+    <input type="email" name="userEmail" id="userEmail" pattern="\w+([-+.]\w+)*@(dbs\.com|hcl\.com)" placeholer="Enter email" required/></br>
+    
+    User Password 
+    <input type="password" id="userPassword" name="userPassword" minlength="8" placeholder="Enter password" required/><br/>
+    
+    <input type = "button" id="add" name="add" onclick="addUser()" value="add"/>
+    <input type="submit" id="usersubmit" value="usersubmit" onclick="validateUser()"/>	
+</body>
+</html>
